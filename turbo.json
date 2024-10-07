@@ -1,0 +1,61 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "outputs": [
+        "build/**",
+        "dist/**"
+      ]
+    },
+    "clean": {
+      "cache": false
+    },
+    "clean:full": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": [
+        "APPLICATION_NAME",
+        "AWS_ACCESS_KEY_ID",
+        "AWS_REGION",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_SESSION_TOKEN",
+        "COGNITO_IDENTITY_POOL_ID",
+        "COGNITO_USE_LOCAL_VERIFIER",
+        "COGNITO_USER_POOL_CLIENT_ID",
+        "COGNITO_USER_POOL_ID",
+        "COGNITO_DOMAIN_NAME",
+        "DATABASE_ENDPOINT",
+        "DATABASE_TABLE_NAME",
+        "DATABASE_PORT",
+        "DATABASE_LAUNCH_LOCAL",
+        "EDGE_ENDPOINT",
+        "PUBLIC_URL",
+        "NODE_ENV",
+        "SERVICE_ENDPOINTS",
+        "AUTH_MODE"
+      ]
+    },
+    "lint": {},
+    "lint:commit": {},
+    "lint:fix": {},
+    "playwright": {
+      "env": [
+        "ENDPOINT",
+        "LAUNCH_WEB_SERVER",
+        "USER_PASSWORD"
+      ]
+    },
+    "test": {
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "test:commit": {},
+    "test:watch": {
+      "cache": false
+    }
+  }
+}
